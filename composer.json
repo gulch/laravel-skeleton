@@ -27,7 +27,15 @@
                 "app/",
                 "app/Models/"
             ]
-        }
+        },
+        "files": [
+            "app/Helpers/functions.php"
+        ],
+        "exclude-from-classmap": [
+            "/Tests/",
+            "/test/",
+            "/tests/"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
