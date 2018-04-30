@@ -106,12 +106,15 @@ return [
 
     'redis' => [
 
-        'client' => 'predis',
+        'client' => env('REDIS_CLIENT', 'phpredis'),
 
         'default' => [
-            'host' => env('REDIS_HOST', '127.0.0.1'),
+            'scheme'   => env('REDIS_SCHEME', 'tcp'),
+            'host'     => env('REDIS_HOST', '127.0.0.1'),
+            'port'     => env('REDIS_PORT', 6379),
+            'path'     => env('REDIS_PATH', '/var/run/redis/redis.sock'),
+            'prefix'   => env('REDIS_PREFIX', ''),
             'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', 6379),
             'database' => 0,
         ],
 
