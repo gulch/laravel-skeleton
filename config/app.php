@@ -212,5 +212,6 @@ return [
     ],
 
     'backend-prefix' => env('APP_BACKEND_PREFIX', 'backend'),
+    'version' => env('APP_VERSION', '1.0.0'),
 
 ];
